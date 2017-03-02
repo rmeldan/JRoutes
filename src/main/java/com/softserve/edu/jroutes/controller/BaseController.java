@@ -1,17 +1,31 @@
 package com.softserve.edu.jroutes.controller;
 
-import com.google.gson.Gson;
-import com.softserve.edu.jroutes.component.RegUserInterface;
-import com.softserve.edu.jroutes.dto.RouteConnectionExDTO;
-import com.softserve.edu.jroutes.entity.*;
-import com.softserve.edu.jroutes.service.*;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.*;
+import com.google.gson.Gson;
+import com.softserve.edu.jroutes.dto.RouteConnectionExDTO;
+import com.softserve.edu.jroutes.entity.Country;
+import com.softserve.edu.jroutes.entity.RoutePoint;
+import com.softserve.edu.jroutes.entity.SecurityRole;
+import com.softserve.edu.jroutes.entity.Transport;
+import com.softserve.edu.jroutes.service.ElementService;
+import com.softserve.edu.jroutes.service.RouteConnectionService;
+import com.softserve.edu.jroutes.service.RoutePointService;
+import com.softserve.edu.jroutes.service.RouteService;
+import com.softserve.edu.jroutes.service.RouteServiceImpl;
+import com.softserve.edu.jroutes.service.SavedRouteService;
+import com.softserve.edu.jroutes.service.SecurityRoleService;
+import com.softserve.edu.jroutes.service.UserService;
 
 @Controller
 @RequestMapping("/")
@@ -33,8 +47,6 @@ public class BaseController {
     private UserService userService;
     @Autowired
     private ElementService<Transport> transportService;
-    @Autowired
-    private RegUserInterface registeredUserObject;
     
     private static final Logger LOGGER = Logger.getLogger(RouteBuiltController.class);
 /**
@@ -69,7 +81,6 @@ public class BaseController {
         
         LOGGER.info("Size of Countries passed to index: " + countries.size());
         LOGGER.info("Size of transport list passed to index: " + transportListFinal.size());
-
         return "index";
     }
 /**
@@ -104,7 +115,7 @@ public class BaseController {
         LOGGER.info("Combo box city fill function");
         LOGGER.info("Country selected: " + country.getName());
         LOGGER.info("Size of cities passed to index: " + routePointList.size());
-
+        
         return json;
     }
 

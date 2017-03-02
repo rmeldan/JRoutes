@@ -85,13 +85,10 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:formSubmit()" />
-                        <i class="glyphicon glyphicon-off"></i>
-                        <spring:message code="menuAdmin.exit"/></a>
-                        <c:url var="logoutUrl" value="/logout"/>
-                        <form action="${logoutUrl}" method="post" id="logoutForm">
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                        </form>
+                        <a href="/jroutes/j_spring_security_logout">
+                        <i class="glyphicon glyphicon-off"></i> 
+						<spring:message code="menuAdmin.exit" />
+                        </a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

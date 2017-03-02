@@ -169,8 +169,4 @@ function userPagination() {
 	});
 }
 
-function formSubmit() {
-    document.getElementById("logoutForm").submit();
-}
-
 </script>

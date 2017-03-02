@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<mapping class="com.softserve.edu.jroutes.entity.Transport" />
+		<mapping class="com.softserve.edu.jroutes.entity.Country" />
+		<mapping class="com.softserve.edu.jroutes.entity.RoutePoint" />
+		<mapping class="com.softserve.edu.jroutes.entity.RouteConnection" />
+		<mapping class="com.softserve.edu.jroutes.entity.User" />
+		<mapping class="com.softserve.edu.jroutes.entity.SecurityRole" />
+		<mapping class="com.softserve.edu.jroutes.entity.SavedRoute" />
+		<mapping class="com.softserve.edu.jroutes.entity.Route" />
+	</session-factory>
+</hibernate-configuration>

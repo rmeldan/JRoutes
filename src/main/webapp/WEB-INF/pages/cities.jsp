@@ -92,9 +92,9 @@ $.each(response,function(i,item){
 			<div class="col-md-8">
 				<div class="row margin-bottom-10">
 					<div class="col-md-6">
-						<form:form action="find" method="POST" role="form">
-							<input type="text" id="find" class="form-control" name="name" placeholder="Пошук" >
-						</form:form>
+						<form action="find" method="POST" role="form">
+							<input type="text" id="find" class="form-control" name="name" placeholder="Пошук">	
+						</form>
 					</div>
 					<div class="col-md-6">
 						<select name="search" class="form-control" id="search">
@@ -152,7 +152,7 @@ $.each(response,function(i,item){
 
 	
 
-				<form:form action="addingRoutePoint" method="POST" role="form" >
+				<form action="addingRoutePoint" method="POST" role="form">
 					<c:if test="${not empty result}">
 						<div class="alert alert-success">${result}</div>
 					</c:if>
@@ -191,7 +191,7 @@ $.each(response,function(i,item){
 						</div>
 					</div>
 
-				</form:form>
+				</form>
 
 
 			</div>

@@ -1,14 +1,25 @@
 package com.softserve.edu.jroutes.component;
 
-import com.softserve.edu.jroutes.dto.*;
-import com.softserve.edu.jroutes.entity.*;
-import com.softserve.edu.jroutes.service.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
-
-import java.util.*;
+import com.softserve.edu.jroutes.dto.RouteConnectPointDto;
+import com.softserve.edu.jroutes.dto.SavedRouteDto;
+import com.softserve.edu.jroutes.entity.Country;
+import com.softserve.edu.jroutes.entity.Route;
+import com.softserve.edu.jroutes.entity.RouteConnection;
+import com.softserve.edu.jroutes.entity.RoutePoint;
+import com.softserve.edu.jroutes.entity.SavedRoute;
+import com.softserve.edu.jroutes.entity.User;
+import com.softserve.edu.jroutes.service.RouteConnectionService;
+import com.softserve.edu.jroutes.service.RoutePointService;
+import com.softserve.edu.jroutes.service.SavedRouteService;
 
 /**
  * @author Roman

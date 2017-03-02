@@ -119,7 +119,7 @@
 				<h2 class="border-bottom-green">
 					<i class="glyphicon glyphicon-ok"></i> Додати роль
 				</h2>
-				<form:form class="form-horizontal" role="form" method="post" action="add"
+				<form class="form-horizontal" role="form" method="post" action="add"
 					id="addingRoleForm" commandName="securityRole">
 					<div class="form-group">
 						<label for="inputSR" class="col-sm-3 control-label">Назва
@@ -136,7 +136,7 @@
 							</button>
 						</div>
 					</div>
-				</form:form>
+				</form>
 			</div>
 		</div>
 	</div>

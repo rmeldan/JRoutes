@@ -45,7 +45,7 @@
                 	</c:if>
                 </div>     
             </c:if> 
-			<form:form class="form-horizontal" role="form" method="post"
+			<form class="form-horizontal" role="form" method="post"
 				action="savingRoute" commandName="routeConnectionDTO">
 				<div class="form-group">
 					<label class="col-sm-4 control-label"><spring:message
@@ -70,7 +70,7 @@
 						</button>
 					</div>
 				</div>
-			</form:form>
+			</form>
 		</div>
 	</div>
 </div>
