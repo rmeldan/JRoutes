@@ -31,6 +31,7 @@ public class EmbeddedJettyServer {
         context.setAttribute(InstanceManager.class.getName(), new SimpleInstanceManager());
         context.addBean(new ServletContainerInitializersStarter(context), true);
         context.setContextPath("/jroutes");
+
         return context;
     }
 
