@@ -38,6 +38,7 @@ public class EmbeddedJettyServer {
     private static List<ContainerInitializer> jspInitializers() {
         List<ContainerInitializer> initializers = new ArrayList<>();
         initializers.add(new ContainerInitializer(new JettyJasperInitializer(), null));
+        //1
         return initializers;
     }
 }
