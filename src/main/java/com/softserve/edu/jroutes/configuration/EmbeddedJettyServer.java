@@ -33,11 +33,16 @@ public class EmbeddedJettyServer {
         context.setContextPath("/jroutes");
 
         return context;
+
     }
 
     private static List<ContainerInitializer> jspInitializers() {
         List<ContainerInitializer> initializers = new ArrayList<>();
         initializers.add(new ContainerInitializer(new JettyJasperInitializer(), null));
+        //1
+        //2
+        //3
+        //4
         return initializers;
     }
 }
