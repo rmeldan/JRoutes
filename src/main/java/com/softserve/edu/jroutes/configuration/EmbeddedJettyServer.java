@@ -33,6 +33,7 @@ public class EmbeddedJettyServer {
         context.setContextPath("/jroutes");
 
         return context;
+
     }
 
     private static List<ContainerInitializer> jspInitializers() {
