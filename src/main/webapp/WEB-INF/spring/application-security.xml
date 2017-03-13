@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                    http://www.springframework.org/schema/security 
+                    http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<http pattern="/css/**" security="none" />
+	
+	<http auto-config="true" use-expressions="true">
+		<access-denied-handler error-page="/accessDenied" />
+		<intercept-url pattern="/adminHome/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/profile/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER', 'ROLE_SUPER-ADMIN')" />
+		<intercept-url pattern="/routes/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/users/**" access="hasRole('ROLE_SUPER-ADMIN')" />
+		<intercept-url pattern="/securityRoles/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/transport/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/countries/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/cities/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/routeconnection/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/profile/" access="hasRole('ROLE_ADMIN')" />
+		<form-login 
+		login-page="/admin"
+		authentication-failure-url="/admin" 
+		default-target-url="/" />
+		<anonymous username="guest" granted-authority="ROLE_ANONYMOUS" />
+	</http>	
+
+		<authentication-manager>		
+			<authentication-provider user-service-ref="userDetailsServiceImpl" >
+	 				<password-encoder ref="encoder"/>				
+			</authentication-provider>		
+		</authentication-manager>	
+	<beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	<beans:bean id="userDetailsServiceImpl" class="com.softserve.edu.jroutes.controller.UserDetailsServiceImpl"/>	
+</beans:beans>   

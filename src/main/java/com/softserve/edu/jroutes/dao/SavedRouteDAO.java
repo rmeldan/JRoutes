@@ -1,13 +1,15 @@
 package com.softserve.edu.jroutes.dao;
 
-import com.softserve.edu.jroutes.entity.*;
-import com.softserve.edu.jroutes.exception.NonUniqueException;
+import java.util.ArrayList;
+import java.util.List;
 import org.apache.log4j.Logger;
-import org.hibernate.*;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
-
-import java.util.*;
+import com.softserve.edu.jroutes.entity.SavedRoute;
+import com.softserve.edu.jroutes.entity.User;
+import com.softserve.edu.jroutes.exception.NonUniqueException;
 
 /**
  * @author Roman

@@ -28,7 +28,7 @@ $( document ).ready(function() {
 	<div class="row">
 		<div class="col-md-6 col-offset-md-6">
 			<h3 class="border-bottom-green">Редагувати назву ролі</h3>
-			<form:form class="form-horizontal" role="form" method="post" action="edit"
+			<form class="form-horizontal" role="form" method="post" action="edit"
 				commandName="securityRole" id="editSecurityRole">
 				<div class="form-group">
 					<label for="editRole" class="col-sm-6 control-label">Назва
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 						</a>
 					</div>
 				</div>
-			</form:form>
+			</form>
 		</div>
 	</div>
 </div>

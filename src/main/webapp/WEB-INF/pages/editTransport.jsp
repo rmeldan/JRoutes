@@ -31,7 +31,7 @@ $( document ).ready(function() {
 	<div class=row>
 		<div class="col-md-6 col-offset-md-6">
 			<h3 class="border-bottom-green"><spring:message code="transport.editName" /></h3>
-			<form:form class="form-horizontal" role="form" method="post" action="edit"
+			<form class="form-horizontal" role="form" method="post" action="edit"
 				commandName="transportDTO" id="form-transport">
 				<div class="form-group">
 					<label class="col-sm-4 control-label"><spring:message code="transport.name" /></label> 
@@ -52,7 +52,7 @@ $( document ).ready(function() {
 						</button>
 					</div>
 				</div>
-			</form:form>
+			</form>
 		</div>
 	</div>
 </div>

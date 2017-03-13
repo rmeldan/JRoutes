@@ -89,12 +89,12 @@ $( document ).ready(function() {
     						${errorMessage}
     					</div>
 					</c:if>
-                <form:form class="form-horizontal" role="form" action="addingTransport" method="POST" id="form-transport">
+                <form class="form-horizontal" role="form" action="addingTransport" method="POST" id="form-transport">
                     <div class="form-group">
                         <label for="inputTransport" class="col-sm-3 control-label"><spring:message code="transport.name" /></label>
 
                         <div class="col-sm-9">
-                            <input type="text" class="form-control" id="inputTransport" name="name" placeholder='<spring:message code="transport.enterName" />' >
+                            <input type="text" class="form-control" id="inputTransport" name="name" placeholder='<spring:message code="transport.enterName" />'>
                         </div>
                     </div>
                     <div class="form-group">
@@ -104,7 +104,7 @@ $( document ).ready(function() {
                             </button>
                         </div>
                     </div>
-                </form:form>
+                </form>
             </div>
         </div>
     </div>

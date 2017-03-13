@@ -12,7 +12,8 @@
 <script src="<c:url value="/resources/js/confirmDeleteRecord.js" />"></script>
 <script src="<c:url value="/resources/js/userRolesManagement.js" />"></script>
 <script>
-    function formSubmit() {
-        document.getElementById("logoutForm").submit();
-    }
+
+
+
+
 </script>

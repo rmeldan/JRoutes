@@ -7,7 +7,7 @@
 				"${role.name}"?</h3>
 		</div>
 		<div class="modal-body">
-			<form:form class="form-horizontal" role="form" method="post"
+			<form class="form-horizontal" role="form" method="post"
 				action="delete" commandName="securityRole">
 				<div class="form-group">
 					<input type="text" class="form-control" id="deleteRoleId"
@@ -29,7 +29,7 @@
 
 					</div>
 				</div>
-			</form:form>
+			</form>
 		</div>
 	</div>
 </div>

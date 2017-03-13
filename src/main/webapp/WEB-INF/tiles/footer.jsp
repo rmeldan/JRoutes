@@ -10,8 +10,3 @@
 <script src="<c:url value="/resources/js/bootstrap.js" />"></script>
 <script src="<c:url value="/resources/js/jquery.simplePagination.js" />"></script>
 <script src="<c:url value="/resources/js/jquery.validation.js" />"></script>
-<script>
-    function formSubmit() {
-        document.getElementById("logoutForm").submit();
-    }
-</script>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- Pages Front -->
+
+	<definition name="base.definition" template="/WEB-INF/tiles/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<definition name="index" extends="base.definition">
+		<put-attribute name="title" value="Welcome JRoutes" />
+		<put-attribute name="body" value="/WEB-INF/pages/index.jsp" />
+	</definition>
+	<definition name="userRoutes" extends="base.definition">
+		<put-attribute name="title" value="Welcome JRoutes" />
+		<put-attribute name="body" value="/WEB-INF/pages/userRoutes.jsp" />
+	</definition>
+	<definition name="userRoutesMore" extends="base.definition">
+		<put-attribute name="title" value="More about Route" />
+		<put-attribute name="body" value="/WEB-INF/pages/userRoutesMore.jsp" />
+	</definition>
+	<definition name="userRouteSave" extends="base.definition">
+		<put-attribute name="title" value="More about Route" />
+		<put-attribute name="body" value="/WEB-INF/pages/userRouteSave.jsp" />
+	</definition>
+
+	<!-- Admin Authentication -->
+
+	<definition name="base.definition.admin" template="/WEB-INF/tiles/layout-admin.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header-admin" value="/WEB-INF/tiles/header-admin.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-admin.jsp" />
+	</definition>
+
+	<definition name="admin" extends="base.definition.admin">
+		<put-attribute name="title" value="" />	
+		<put-attribute name="body" value="/WEB-INF/pages/admin.jsp" />
+	</definition>
+
+
+	<!-- AdminHome -->
+
+	<definition name="base.definition.adminHome" template="/WEB-INF/tiles/layout-adminHome.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header-admin" value="/WEB-INF/tiles/header-admin.jsp" />
+		<put-attribute name="menu-admin" value="/WEB-INF/tiles/menu-admin.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-admin.jsp" />
+	</definition>
+
+	<definition name="adminHome" extends="base.definition.adminHome">
+		<put-attribute name="title" value="AdminHome" />
+		<put-attribute name="body" value="/WEB-INF/pages/adminHome.jsp" />
+	</definition>
+
+	<definition name="transport" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Transport" />
+		<put-attribute name="body" value="/WEB-INF/pages/transport.jsp" />
+	</definition>
+
+	<definition name="editTransport" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Transport" />
+		<put-attribute name="body" value="/WEB-INF/pages/editTransport.jsp" />
+	</definition>
+
+	<definition name="countries" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Countries" />
+		<put-attribute name="body" value="/WEB-INF/pages/countries.jsp" />
+	</definition>
+
+	<definition name="cities" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Cities" />
+		<put-attribute name="body" value="/WEB-INF/pages/cities.jsp" />
+	</definition>
+
+	<definition name="routeconnection" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Routeconnection" />
+		<put-attribute name="body" value="/WEB-INF/pages/routeconnection.jsp" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-routeConnection.jsp" />
+	</definition>
+
+	<definition name="savedRoutesAdmin" extends="base.definition.adminHome">
+		<put-attribute name="title" value="SavedRoutes" />
+		<put-attribute name="body" value="/WEB-INF/pages/savedRoutesAdmin.jsp" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-route.jsp" />		
+	</definition>
+
+	<definition name="users" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Users" />
+		<put-attribute name="body" value="/WEB-INF/pages/users.jsp" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-user.jsp" />	
+	</definition>
+
+	<definition name="roles" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Roles" />
+		<put-attribute name="body" value="/WEB-INF/pages/roles.jsp" />
+	</definition>
+
+	<definition name="profile" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/pages/profile.jsp" />
+	</definition>
+
+
+	<!-- Edit & delete security role pages (forms) -->
+	<definition name="editSecurityRole" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/editSecurityRole.jsp" />
+	</definition>
+
+	<definition name="deleteSecurityRole" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/deleteSecurityRole.jsp" />
+	</definition>
+
+	<!-- form to add/remove roles from user -->
+	<definition name="manageUserSecurityRole" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/userRolesManagment.jsp" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-user.jsp" />
+	</definition>
+
+	<!-- non checked code!!!!!!!1 -->
+	<!-- Edit & delete Country pages (forms) -->
+	<definition name="editCountry" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/pages/editCountry.jsp" />
+	</definition>
+
+	<definition name="deleteCountry" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/WEB-INF/pages/deleteCountry.jsp" />
+	</definition>
+
+	<definition name="editCity" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Cities" />
+		<put-attribute name="body" value="/WEB-INF/pages/editCity.jsp" />
+	</definition>
+	
+	<definition name="editRouteConn" extends="base.definition.adminHome">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/editRouteConn.jsp" />
+	</definition>
+
+	<!-- Errors -->
+
+	<definition name="base.definition.errors" template="/WEB-INF/tiles/layout-errors.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header-admin" value="/WEB-INF/tiles/header-admin.jsp" />
+		<put-attribute name="menu-admin" value="/WEB-INF/tiles/menu-admin.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-admin.jsp" />
+	</definition>
+	
+	  <definition name="editRouteConnection" extends="base.definition.errors">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/exception_error.jsp" />
+	</definition>
+	
+	<definition name="editRouteConnection" extends="base.definition.errors">
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body"
+			value="/WEB-INF/pages/error/generic_error.jsp" />
+	</definition>  
+	
+	<!-- UserHome -->
+	<definition name="savedRoutesUser" extends="base.definition.adminHome">
+		<put-attribute name="title" value="SavedRoutes" />
+		<put-attribute name="body" value="/WEB-INF/pages/savedRoutesUser.jsp" />
+		<put-attribute name="footer-admin" value="/WEB-INF/tiles/footer-route.jsp" />
+	</definition>
+
+</tiles-definitions>  

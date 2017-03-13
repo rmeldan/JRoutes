@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration>
+  <appender name="CONSOLE-DEBUG" class="org.apache.log4j.ConsoleAppender">
+    <param name="target" value="System.out"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%5p] %m at %l%n"/>
+    </layout>
+    
+    <filter class="org.apache.log4j.varia.LevelRangeFilter">
+      <param name="LevelMin" value="ALL"/>
+      <param name="LevelMax" value="INFO"/>
+    </filter>
+  
+  </appender>
+  <appender name="CONSOLE-WARN" class="org.apache.log4j.ConsoleAppender">
+    <param name="target" value="System.err"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%5p] %m at %l%n"/>
+    </layout>
+    <filter class="org.apache.log4j.varia.LevelRangeFilter">
+      <param name="LevelMin" value="WARN"/>
+    </filter>
+  </appender>
+  
+  <appender name="LOG-FILE-APPENDER" class="org.apache.log4j.FileAppender">
+    <param name="file" value="app.log"/>
+    <layout class="org.apache.log4j.PatternLayout">
+      <param name="ConversionPattern" value="%d{ISO8601} [%5p] %c %m at %l%n"/>
+    </layout>
+  </appender>
+ 
+ <!--   <root>
+    <priority value="DEBIG"/>
+    <appender-ref ref="CONSOLE-WARN"/>
+    <appender-ref ref="CONSOLE-DEBUG"/>
+    <appender-ref ref="LOG-FILE-APPENDER"/>
+  </root> -->
+  
+  
+  <!-- Appenders -->
+	<!-- Loggin into console -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
+	
+	<!-- Loging into file -->
+	<appender name="fileInfo" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${user.home}/jroutes/logs/test.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="4" />
+		<param name="Encoding" value="Cp1251" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p (%F:%L:%M)  %c{1}  - %m%n" />
+		</layout>
+	</appender>
+	<appender name="fileWarn" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${user.home}/jroutes/logs/warn.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="10MB" />
+		<param name="MaxBackupIndex" value="4" />
+		<param name="Encoding" value="Cp1251" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p (%F:%L:%M)  %c{1}  - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="com.softserve.edu.jroutes.entity">
+		<level value="info" />
+	</logger>
+	
+	<logger name="com.softserve.edu.jroutes.dao">
+		<level value="info" />
+	</logger>
+
+	<logger name="com.softserve.edu.jroutes.service">
+		<level value="info" />
+	</logger>
+
+	<logger name="com.softserve.edu.jroutes.controller">
+		<level value="info" />
+	</logger>
+	
+	<logger name="infoLog" additivity="false">
+		<level value="info" />
+		<appender-ref ref="fileInfo" />		
+	</logger>
+	
+	<logger name="warnLog">
+		<level value="warn" />
+		<appender-ref ref="fileWarn" />		
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="fileInfo" />
+	</root>
+</log4j:configuration>

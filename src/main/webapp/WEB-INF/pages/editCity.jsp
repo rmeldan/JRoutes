@@ -9,7 +9,7 @@
 	<div class="row">
 		<div class="col-md-6 col-offset-md-6">
 			<h3 class="border-bottom-green"><spring:message code="cities.edit" /></h3>
-			<form:form class="form-horizontal" role="form" method="post" action="edit" commandName="dto">
+			<form class="form-horizontal" role="form" method="post" action="edit" commandName="dto">
 				<div class="form-group">
 				    <label for="editRole" class="col-sm-3 control-label"><spring:message code="cities.city" /></label>
 				    <div class="col-sm-9">
@@ -50,7 +50,7 @@
 						</button>
 				    </div>
 				</div>
-			</form:form>
+			</form>
 		</div>
 </div>
 </div>

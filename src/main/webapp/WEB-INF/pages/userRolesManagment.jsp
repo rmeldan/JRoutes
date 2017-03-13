@@ -29,7 +29,7 @@ $(document).ready(function(){
 			 "${user.lastName}"</h3>
 			<br>
 			<!--label id="useridd">hello</label-->
-			<!--form:form role="form" method="post" action="editRoles"
+			<!--form role="form" method="post" action="editRoles"
 				commandName="roles"-->
 				<div class="row">
 				<div class="alert alert-success" id="userRolesManagmentResult">hello</div>
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 					</div>
 				</div>
-			<!--/form:form-->
+			<!--/form-->
 			<label id="userid" style="color: white;">${userID}</label>
 		</div>
 	</div>
